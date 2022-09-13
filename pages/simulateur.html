@@ -11,6 +11,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <script src="../js/remuneration.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/styles.css" rel="stylesheet" type="text/css">
+        <link href="../css/contact.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="favicon.ico">
     </head>
     <body>
@@ -43,13 +44,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <h1> Simulation de la rémunération d'un employé </h1>
         
         <form name="form_contact" >
-            <div><label for="i_anciennete">Nb années ancienneté ? :</label> <input type="text" name="i_anciennete" id="i_anciennete" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
-            <div><label for="i_s20">Nb S20 ? :</label> <input type="text" name="i_s20" id="i_s20" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
-            <div><label for="i_xspirit">Nb X-Spirit ? :</label> <input type="text" name="i_xspirit" id="i_xspirit" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
-            <div><label for="i_multitec">Nb Multitec ? :</label> <input type="text" name="i_multitec" id="i_multitec" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
-            <div><label for="i_kmparcouru">Nb Multitec ? :</label> <input type="text" name="i_kmparcouru" id="i_kmparcouru" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
-            <div id="controles"><input type="button" id="btn_envoyer" value="Calculer la rémunération"></div>
-            
+            <fieldset id="coordo">
+                <legend>Simulation</legend>
+                <div><label for="i_anciennete">Nb années ancienneté ? :</label> <input type="text" name="i_anciennete" id="i_anciennete" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
+                <div><label for="i_s20">Nb S20 ? :</label> <input type="text" name="i_s20" id="i_s20" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
+                <div><label for="i_xspirit">Nb X-Spirit ? :</label> <input type="text" name="i_xspirit" id="i_xspirit" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
+                <div><label for="i_multitec">Nb Multitec ? :</label> <input type="text" name="i_multitec" id="i_multitec" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
+                <div><label for="i_kmparcouru">Nb Multitec ? :</label> <input type="text" name="i_kmparcouru" id="i_kmparcouru" size="35" pattern="^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s\-]+$" required><div class="input-validation"></div></div>
+                <div id="controles"><input type="button" id="btn_envoyer" value="Calculer la rémunération"></div>
+            </fieldset>
         </form>
         <p id="p_remu">La rémunération sera de : ... €</p>
 
