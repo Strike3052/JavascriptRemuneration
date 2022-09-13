@@ -15,6 +15,9 @@ function calculAncien(Anciennete)
     {
         return ancien10ans;
     }
+    else {
+        return 1;
+    }
 }
 
 function calculXSpirit(nbCasques)
@@ -25,6 +28,9 @@ function calculXSpirit(nbCasques)
     if (nbCasques >= 50)
     {
         return ((nbCasques-50)*prixXSpirit) * pourcentageXSpirit;
+    }
+    else {
+        return 0;
     }
 }
 
