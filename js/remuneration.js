@@ -19,7 +19,7 @@ function calculAncien(Anciennete)
         return 1;
     }
 }
-
+ 
 function calculXSpirit(nbCasques)
 {
     const prixXSpirit = 350;
@@ -73,13 +73,17 @@ function calculRemu() {
     let nbMultitec = parseInt(window.document.querySelector("#i_multitec").value); // Int
     let nbKmParcouru = parseInt(window.document.querySelector("#i_kmparcouru").value); // Int
     
+	if (!isNaN(nbAncien) && !isNaN(nbS20) && !isNaN(nbXSpirit) && !isNaN(nbMultitec) && !isNaN(nbKmParcouru))
+	{
     let primeS20 = (nbS20 * prixS20) * pourcentageS20;
     let primeXSpirit = calculXSpirit(nbXSpirit);
     let primeMultitec = calculMultitec(nbMultitec);
     let primeKmParcouru = calculKmParcouru(nbKmParcouru);
     
     window.document.querySelector("#p_remu").innerHTML = "La rémunération sera de : " + (fixe*calculAncien(nbAncien) + primeS20 + primeXSpirit + primeMultitec + primeKmParcouru) + " €";
-
+	} else {
+		window.document.querySelector("#p_remu").innerHTML = "Les valeurs saisies sont invalides !";
+	}
 }
 
 window.addEventListener("load", function() {
