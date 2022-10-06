@@ -28,7 +28,7 @@ function affichePrime(prime, nbAccidents)
     
     if (prime === primeAvecAccidents)
     {
-        window.document.querySelector("#remuneration").innerHTML =
+        window.document.querySelector(" ration").innerHTML =
             "Votre prime sera de : " + Math.round(primeAvecAccidents)  + " €";
     } else if (nbAccidents === 1) {
         window.document.querySelector("#remuneration").innerHTML =
